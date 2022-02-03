@@ -138,7 +138,7 @@
                             <option value="">Select...</option>
                             @foreach($categories as $category)
 
-                                <option value="{{$category->id}}"
+                                <option value="{{$category->id}}" @if (old('category') == $category->id) selected="selected" @endif 
                                         @if(isset($post))
                                         @if($category->id == $post->category_id)
                                         selected
