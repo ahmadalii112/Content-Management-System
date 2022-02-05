@@ -19,7 +19,9 @@
 
                     <div class="col-md-6">
                         <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
-                               name="title" value="{{isset($post) ? $post->title : old('title') }}" required
+                               name="title" value="{{isset($post) ? $post->title : old('title') }}"
+                              {{-- value="old('title',($post) ? $post->title : '')" --}}
+                               required
                                autocomplete="name" autofocus>
 
                         @error('title')
